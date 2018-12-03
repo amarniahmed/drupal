@@ -73,8 +73,7 @@
             "web/themes/contrib/{$name}": ["type:drupal-theme"],
             "drush/Commands/{$name}": ["type:drupal-drush"]
         },
-        "merge-plugin": {
-           "require": ["web/modules/custom/test/composer.json"]
+       
        },
         "drupal-scaffold": {
             "initial": {
