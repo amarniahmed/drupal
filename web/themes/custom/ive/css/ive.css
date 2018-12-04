@@ -1,3 +1,17 @@
 a{
-	color:red,
+	color:red;
+}
+
+
+.region-header .site-branding__name a{
+	color:orange;
+}
+
+.maregion{
+	margin: 0 auto;
+    width:calc(50%);
+}
+
+#header{
+  background: url();
 }

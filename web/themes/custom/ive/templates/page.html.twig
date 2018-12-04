@@ -107,6 +107,13 @@
         </aside>
       </div>
     {% endif %}
+    {% if page.maregion or page.maregion or page.featured_bottom_third %}
+      <div class="maregion">
+            {{ page.maregion }}
+      </div>
+    {% endif %}
+
+
     <footer class="site-footer">
       <div class="layout-container">
         {% if page.footer_first or page.footer_second or page.footer_third or page.footer_fourth %}
