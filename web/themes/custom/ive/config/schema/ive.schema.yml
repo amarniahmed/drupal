@@ -1,0 +1,4 @@
+# Schema for the configuration files of the ive theme.
+
+ive.settings:
+  type: theme_settings
