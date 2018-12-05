@@ -1,0 +1,17 @@
+four_square:
+  label: Four square
+  path:  layouts/four-square
+  template: layouts--twocol
+  library: layout-discovery/twocol
+  category: 'columns: 2'
+  default_region:  first
+  icon:  layout-twocol.png
+  regions:
+    top:
+      label: top
+    first:
+      label: First
+    second:
+      label: second
+    bottom:
+      label: Bottom
