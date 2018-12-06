@@ -1,0 +1,18 @@
+four_square:
+  label: Four square
+  path:  layouts/four-square
+  category:  Ive
+  library: ive/ive.libraries.yml
+  template:
+  default_region:  content
+  icon:  four-squares.png
+  default_regions: top left
+  regions:
+    top_left:
+      label: top left
+    top_right:
+      label: top right
+    bottom_left:
+      label: bottom left
+    bottom_right:
+      label: bottom right

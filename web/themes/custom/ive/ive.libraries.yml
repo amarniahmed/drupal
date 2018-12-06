@@ -1,7 +1,25 @@
+js:
+  js:
+    js/ive.js: {}
+  dependecies:
+    -core/jQuery
+    -core/drupal
+
+four_square:
+  css:
+    layout:
+      layouts/four-square/four-square.css: {}
+
 ive:
   css:
     theme:
       css/ive.css: {}
+
+article_teaser:
+  css:
+    layout:
+      css/components/article_teaser.css: {}
+
 global-styling:
   version: VERSION
   css:

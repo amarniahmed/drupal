@@ -13,5 +13,6 @@ a{
 }
 
 #header{
-  background: url();
+  background: url(../images/bejaia.jpg);
+	background-size:cover;
 }

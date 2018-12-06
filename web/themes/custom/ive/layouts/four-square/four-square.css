@@ -1,0 +1,9 @@
+.four-square-container{
+    dislplay:flex;
+    flex-wrap:wrap;
+}
+.four-square-container div {
+
+  flex: 0 0 40%;
+
+}

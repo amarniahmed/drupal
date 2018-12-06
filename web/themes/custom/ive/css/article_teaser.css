@@ -1,0 +1,8 @@
+.article_teaser{
+    display:flex;
+}
+
+.article_teaser div{
+    flex-basis= 50%;
+    flex-grow:0;
+}
