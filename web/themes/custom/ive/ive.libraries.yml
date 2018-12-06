@@ -1,3 +1,15 @@
+js:
+  js:
+    js/ive.js: {}
+  dependecies:
+    -core/jQuery
+    -core/drupal
+
+four_square:
+  css:
+    layout:
+      layouts/four-square/four-square.css: {}
+
 ive:
   css:
     theme:

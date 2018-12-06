@@ -1,17 +1,25 @@
-four_square:
-label: Four square
-path:  layouts/four-square
-template: layouts--twocol
-library: layout-discovery/twocol
-category: 'columns: 2'
-default_region:  first
-icon:  layout-twocol.png
-regions:
-top:
-label: top
-first:
-label: First
-second:
-label: second
-bottom:
-label: Bottom
+{% if content %}
+   <div class="foursquare-container">
+    {% if content.top_left %}
+        <div class=""four-square-top-left>
+            {{ content.top_left }}
+        </div>
+    {% endif %}
+   </div>
+    {% if content.top_right %}
+        <div class=""four-square-top-right>
+            {{ content.top_right }}
+        </div>
+    {% endif %}
+    {% if content.bottom_left %}
+        <div class=""four-square-bottom-left>
+            {{ content.bottom_left }}
+        </div>
+    {% endif %}
+    {% if content.bottom_right %}
+        <div class=""four-square-bottom-right>
+            {{ content.bottom_right }}
+        </div>
+    {% endif %}
+{% endif %}
+

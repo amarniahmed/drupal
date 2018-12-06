@@ -1,17 +1,18 @@
 four_square:
   label: Four square
   path:  layouts/four-square
-  template: layouts--twocol
-  library: layout-discovery/twocol
-  category: 'columns: 2'
-  default_region:  first
-  icon:  layout-twocol.png
+  category:  Ive
+  library: ive/ive.libraries.yml
+  template:
+  default_region:  content
+  icon:  four-squares.png
+  default_regions: top left
   regions:
-    top:
-      label: top
-    first:
-      label: First
-    second:
-      label: second
-    bottom:
-      label: Bottom
+    top_left:
+      label: top left
+    top_right:
+      label: top right
+    bottom_left:
+      label: bottom left
+    bottom_right:
+      label: bottom right
