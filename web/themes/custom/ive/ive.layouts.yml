@@ -1,12 +1,11 @@
 four_square:
-  label: Four square
-  path:  layouts/four-square
-  category:  Ive
-  library: ive/ive.libraries.yml
-  template:
-  default_region:  content
-  icon:  four-squares.png
-  default_regions: top left
+  label: 'Four square'
+  path: layouts/four-square
+  category: Ive
+  library: ive/four-square
+  template: four-square
+  icon: four-squares.png
+  default_region: top_left
   regions:
     top_left:
       label: top left
@@ -16,3 +15,21 @@ four_square:
       label: bottom left
     bottom_right:
       label: bottom right
+
+jquery-ui-tab:
+  label: 'Jquery ui tab'
+  path: layouts/jquery-ui-tab
+  category: Ive
+  library: ive/jquery-ui-tab
+  template: jquery-ui-tab
+  icon: jquery-ui-tab.png
+  default_region: first_tab
+  regions:
+    first_tab:
+      label: first tab
+    second_tab:
+      label: second atb
+    third_tab:
+      label: third tab
+    forth_tab:
+      label: forth tab

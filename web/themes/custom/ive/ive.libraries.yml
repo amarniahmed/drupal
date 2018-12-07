@@ -1,14 +1,21 @@
 js:
   js:
     js/ive.js: {}
-  dependecies:
-    -core/jQuery
-    -core/drupal
+  dependencies:
+    - core/jQuery
+    - core/drupal
 
-four_square:
+four-square:
   css:
     layout:
       layouts/four-square/four-square.css: {}
+
+jquery-ui-tab:
+  js:
+    layout:
+      layouts/jquery-ui-tab/tab.js: {}
+  dependencies:
+    - core/jquery.ui.tabs
 
 ive:
   css:
