@@ -13,5 +13,8 @@
         });
 
    });
-})(jQuery, Drupal, drupalSettings);
+
+   })(jQuery, Drupal, drupalSettings);
+
+
 

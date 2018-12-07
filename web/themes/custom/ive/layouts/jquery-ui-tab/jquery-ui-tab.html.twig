@@ -1,0 +1,35 @@
+ {% if content %}
+<div class=tabs-container">
+    <ul>
+        <li><a href="tabs-1">{{ content.first_tab|first[first['article']] }}</a></li>
+        <li><a href="tabs-2"></a></li>
+        <li><a href="tabs-3"></a></li>
+        <li><a href="tabs-4"></a></li>
+    </ul>
+
+    {% if content.first_tab %}
+        <div id="tabs-1">
+            {{ content.first_tab }}
+        </div>
+    {% endif %}
+    {% if content.second_tab %}
+        <div id="tabs-2">
+            {{ content.second_tab }}
+        </div>
+    {% endif %
+
+    {% if content.third_tab %}
+         <div id="tabs-3">
+             {{ content.third_tab }}
+        </div>
+        {% endif %}
+
+        {% if content.forth_tab %}
+             <div id="tabs-3">
+                 {{ content.forth_tab }}
+             </div>
+             {% endif }
+    {% endif %
+
+</div>
+ {% endif %}
