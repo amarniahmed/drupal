@@ -1,0 +1,5 @@
+name: 'Console Tests'
+type: module
+description: 'Consol testing'
+core: 8.x
+package: 'training'
