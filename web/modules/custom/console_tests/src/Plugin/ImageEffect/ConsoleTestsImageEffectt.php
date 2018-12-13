@@ -21,7 +21,7 @@ class ConsoleTestsImageEffectt extends ImageEffectBase {
    */
   public function applyEffect(ImageInterface $image) {
     // Implement Image Effect.
-    return imagefilter($image->getToolkit()->getResource());
+    return imagefilter($image->getToolkit()->getResource(), IMG_FILTER_NEGATE, NULL);
   }
 
 }
