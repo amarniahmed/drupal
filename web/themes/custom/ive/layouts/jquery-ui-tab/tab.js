@@ -1,9 +1,9 @@
-(function($){
+(function($) {
+
     $(document).ready(function() {
-        $(function () {
-            $("#tabs").tabs();
-        });
-    };
+
+        $("#tabs").tabs();
+
+    });
 
 })(jQuery);
-

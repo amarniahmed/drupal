@@ -2,7 +2,7 @@ js:
   js:
     js/ive.js: {}
   dependencies:
-    - core/jQuery
+    - core/jquery
     - core/drupal
 
 four-square:

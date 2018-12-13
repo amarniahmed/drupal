@@ -1,0 +1,64 @@
+<?php
+use Drupal\Core\Routing\RouteMatchinterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Session\AccountInterface;
+use Drupal\user\UserInterface;
+
+
+function hello_cron(){
+
+    drupal_set_message('hello cron');
+}
+
+/**
+ * @param $route_name
+ * @param RouteMatchinterface $route_match
+ * @return string
+ */
+function hello_help($route_name,RouteMatchInterface $route_match){
+    switch($route_name) {
+        case 'help.page.hello':
+            return '<p>'.t('this module aims at routing user connections activity').'</p>';
+    }
+}
+
+/**
+ * @param UserInterface $acount
+ */
+function hello_user_login(UserInterface $account){
+
+    //ksm($acount);
+
+    \Drupal::messenger()->addMessage(t('welcom dear %name! vous etes connecté !',
+        ['%name'=>$account->getAccountName()]));
+
+    $database = \Drupal::database();
+    $time_connexion= REQUEST_TIME;
+    $iduser=$account->id();
+
+$database->insert('hello_user_statistics')->fields(['uid'=> $iduser,
+                                                         'time'=> $time_connexion,
+                                                         'action'=> 1,
+                                                        ])->execute();
+}
+function hello_user_logout(AccountInterface $account){
+    $database = \Drupal::database();
+    $time_deconnexion= REQUEST_TIME;
+    $iduser=$account->id();
+
+    $database->insert('hello_user_statistics')->fields(['uid'=> $iduser,
+                                                             'time'=> $time_deconnexion,
+                                                              'action'=> 0,
+                                                              ])->execute();
+
+}
+
+function hello_user_delete(UserInterface $account){
+
+    $database = \Drupal::database();
+   // $time_deconnexion= REQUEST_TIME;
+    $iduser=$account->id();
+    //$User->delete();
+    $database->delete('hello_user_statistics')->condition('uid', $iduser)->execute();
+}

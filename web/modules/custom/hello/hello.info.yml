@@ -1,0 +1,8 @@
+name:  hello
+descritpion:  hello module for Developpeur training.
+type: module
+core:  8.x
+version:  8.x-10.0
+package:  training
+dedendencies:
+  -  views:views
