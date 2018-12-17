@@ -3,3 +3,9 @@ hello.page:
   route_name: 'hello.hello'
   descritpion: 'hello page'
   menu_name: main
+
+hello.form:
+  title: 'hello form'
+  route_name: 'hello.form'
+  descritpion: 'hello calculate'
+  menu_name: main
