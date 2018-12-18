@@ -84,6 +84,8 @@ class HelloForm extends FormBase
         }
 
         \Drupal::Messenger()->addMessage($resultat);
+
+        \Drupal::state()->set('instant_calculate',REQUEST_TIME);
             }
 
     public function validateForm(array &$form, FormStateInterface $form_state)

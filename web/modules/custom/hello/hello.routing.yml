@@ -38,4 +38,12 @@ hello.form:
     _title: 'hello form'
     _form: '\Drupal\hello\Form\HelloForm'
   requirements:
-    _access: 'TRUE'
+    _permission: 'calculate'
+
+hello.config:
+  path: '/admin/hello-stat'
+  defaults:
+    _title: 'hello statistics'
+    _form: '\Drupal\hello\Form\HelloStatistics'
+  requirements:
+    _permission: 'administer hello'
