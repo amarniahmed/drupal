@@ -33,7 +33,7 @@ foreach ($stat_user_connexion as $stats)
             '#rows'=> $rows,
             ];
         $message =[
-            '#theme'=> 'hello_user_connexion',
+            '#theme'=> 'hello',
             '#user'=> $user,
             '#header'=> ['Action', 'Time'],
             '#count'=> $number_connexion,
