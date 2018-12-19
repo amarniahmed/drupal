@@ -6,3 +6,5 @@ console_tests.console_tests_controller_hello:
     _title: 'console tests'
   requirements:
     _permission: 'access content'
+
+

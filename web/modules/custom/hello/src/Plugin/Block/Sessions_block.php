@@ -1,6 +1,10 @@
 <?php
 namespace Drupal\hello\Plugin\Block;
+
 use Drupal\Core\Block\BlockBase;
+use Drupal\Core\Access\AccessResult;
+use Drupal\Core\Session\AccountInterface;
+
 /**
  *provide a HelloBlock block
  *
@@ -29,6 +33,10 @@ class Sessions_block extends BlockBase{
         ];
 
         return $build;
+    }
+
+    protected function blockAccess(AccountInterface  $account){
+        return  AccessResult::allowedIfHasPermission($account, 'access hello');
     }
 
 }

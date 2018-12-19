@@ -2,6 +2,9 @@
 namespace Drupal\hello\Controller;
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\user\UserInterface;
+use Drupal\Core\Datetime\DateFormatter;
+use  Drupal\Component\Datetime\Time;
+
 class StatisticsController extends ControllerBase{
 
     public function content(UserInterface $user){
@@ -9,16 +12,19 @@ class StatisticsController extends ControllerBase{
         $message=$this->t('recuperation des données de  %user passé en paramettre dans lurl',[
             '%user'=> $user->getAccountName()]);
         $stat_user_connexion= \Drupal::database()->select('hello_user_statistics','stat')->fields('stat',[])
-                                                                                        ->condition('uid',$iduser)
+                                                                                         ->condition('uid',$iduser)
                                                                                          ->execute();
-$rows=[];
+        $number_connexion=0;
+        $rows=[];
 foreach ($stat_user_connexion as $stats)
  {if ($stats->action){
-    $actif='actif';}
+     $number_connexion ++;
+    $etat='actif';}
   else{
-    $actif='desactivé';
+    $etat='desactivé';
       }
-      $rows[]=[$stats->time/*->\Drupal::service()->format(('datetime.time'), 'custom', 'H:i s\s'))*/, $actif];
+     $time= \Drupal::service('date.formatter')->format($stats->time, 'custom', 'H:i s\s');
+      $rows[]=[ $etat, $time];
  }
 
         $tab =[
@@ -26,8 +32,16 @@ foreach ($stat_user_connexion as $stats)
             '#header'=> ['Action', 'Time'],
             '#rows'=> $rows,
             ];
+        $message =[
+            '#theme'=> 'hello',
+            '#user'=> $user,
+            '#header'=> ['Action', 'Time'],
+            '#count'=> $number_connexion,
+        ];
 
-        return $tab;
+        return ['message'=> $message,
+            'tab'=> $tab,
+        ];
 
 
 

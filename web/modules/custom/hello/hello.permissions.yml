@@ -1,0 +1,11 @@
+access hello:
+  title: 'hello'
+  description: 'permission de hello'
+
+administer hello:
+  title: 'purge stat admin'
+  description: 'permission admin purge'
+
+calculate:
+  title: 'calculate'
+  description: 'permission calculate'
