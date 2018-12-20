@@ -39,31 +39,55 @@ function hello_help($route_name,RouteMatchInterface $route_match){
 /**
  * @param UserInterface $acount
  */
-function hello_user_login(UserInterface $account){
+function hello_user_login(UserInterface $account)
+                                               {
 
     //ksm($acount);
 
     \Drupal::messenger()->addMessage(t('welcom dear %name! vous etes connecté !',
-        ['%name'=>$account->getAccountName()]));
+        ['%name' => $account->getAccountName()]));
 
     $database = \Drupal::database();
-    $time_connexion= REQUEST_TIME;
-    $iduser=$account->id();
+    $time_connexion = REQUEST_TIME;
+    $iduser = $account->id();
 
-$database->insert('hello_user_statistics')->fields(['uid'=> $iduser,
-                                                         'time'=> $time_connexion,
-                                                         'action'=> 1,
-                                                        ])->execute();
+
+    $roles = \Drupal::config('hello.settings')->get('user_statistics_role');
+    $role_user = $account->getRoles();
+    $commun = array_intersect($roles, $role_user);
+
+    if (count($commun) > 0) {
+
+        $database->insert('hello_user_statistics')->fields(['uid' => $iduser,
+            'time' => $time_deconnexion,
+            'action' => 0,
+        ])->execute();
+    }
 }
 function hello_user_logout(AccountInterface $account){
+
+
+
+
+
+
     $database = \Drupal::database();
     $time_deconnexion= REQUEST_TIME;
     $iduser=$account->id();
 
-    $database->insert('hello_user_statistics')->fields(['uid'=> $iduser,
-                                                             'time'=> $time_deconnexion,
-                                                              'action'=> 0,
-                                                              ])->execute();
+
+    $roles=\Drupal::config('hello.settings')->get('hello_user_role');
+    $role_user=$account->getRoles();
+    $commun= array_intersect($roles,$role_user);
+
+    if(count($commun)>0) {
+
+        $database->insert('hello_user_statistics')->fields(['uid' => $iduser,
+            'time' => $time_deconnexion,
+            'action' => 0,
+        ])->execute();
+
+    }
 
 }
 
@@ -116,5 +140,34 @@ function hello_theme($existing,$type,$theme,$path){
                );
     }
 
+function hello_form_user_admin_settings_alter(array &$form,\Drupal\Core\Form
+\FormStateInterface &$form_state, $form_id){
 
+    $roles=\Drupal::entityTypeManager()->getStorage('user_role')->loadMultiple();
+    $checked_roles = \Drupal::config('hello.settings')->get('user_statistics_role');
 
+   unset($roles['anonymous']);
+
+    $items=[];
+    foreach ($roles as $item){
+        $items[$item->id()] = $item->label();
+    }
+
+    $form['role'] = array('#type' => 'checkboxes',
+        '#options' =>$items,
+        '#default_value' => $checked_roles,
+        );
+
+    $form['#submit'][]='hello_admin_user_settings_submit';
+
+   // $roles=$this->entityTypeManager()->getStorage(user_role_load());
+    //$form_state->getValues('admin_role');
+   //ksm($form);
+}
+
+function hello_admin_user_settings_submit($form, FormStateInterface $form_state){
+    $config=\Drupal::configFactory()->getEditable('hello.settings');
+    $config->set('user_statistics_role',$form_state->getValue('role'))
+        ->save();
+
+}
