@@ -30,7 +30,7 @@ hello.statistics:
     _title: 'hello statistics'
     _controller: '\Drupal\hello\Controller\StatisticsController::content'
   requirements:
-    _access: 'TRUE'
+    _access_hello: '2'
 
 hello.form:
   path: '/hello-form'
