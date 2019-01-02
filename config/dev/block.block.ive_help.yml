@@ -1,4 +1,4 @@
-uuid: 150d75b2-45c4-4035-a184-9304bf66194b
+uuid: 9b12d298-74f9-4294-a48b-2e0bbae588c2
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ _core:
 id: ive_help
 theme: ive
 region: content
-weight: -6
+weight: -30
 provider: null
 plugin: help_block
 settings:

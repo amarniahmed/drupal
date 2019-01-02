@@ -1,6 +1,6 @@
-uuid: e6ac002a-f944-42e7-b56a-f83a9606a78a
+uuid: 71b4146e-3f35-48ea-8a2a-085ef4d9046b
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - system.menu.tools
@@ -8,12 +8,10 @@ dependencies:
     - system
   theme:
     - ive
-_core:
-  default_config_hash: NeHSoqm4XFqA7_0bDmR429ZZQt3LRbZMNRJTMsFyOfI
-id: ive_tools
+id: tools_3
 theme: ive
 region: sidebar_first
-weight: 0
+weight: -5
 provider: null
 plugin: 'system_menu_block:tools'
 settings:

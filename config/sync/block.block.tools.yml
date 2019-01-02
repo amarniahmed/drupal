@@ -1,4 +1,4 @@
-uuid: e6ac002a-f944-42e7-b56a-f83a9606a78a
+uuid: a10aa08e-dea1-409d-adb5-92799709fd38
 langcode: en
 status: false
 dependencies:
@@ -8,9 +8,7 @@ dependencies:
     - system
   theme:
     - ive
-_core:
-  default_config_hash: NeHSoqm4XFqA7_0bDmR429ZZQt3LRbZMNRJTMsFyOfI
-id: ive_tools
+id: tools
 theme: ive
 region: sidebar_first
 weight: 0
