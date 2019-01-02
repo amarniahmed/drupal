@@ -1,0 +1,24 @@
+uuid: b2c34fea-054d-412a-9b57-732a82e16a01
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.tools
+  module:
+    - system
+  theme:
+    - ive
+id: tools_2
+theme: ive
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'system_menu_block:tools'
+settings:
+  id: 'system_menu_block:tools'
+  label: Tools
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 2
+visibility: {  }
