@@ -1,0 +1,9 @@
+uuid: 6f2df5ad-4f80-4f57-b3ef-c11d13d99d18
+langcode: en
+status: true
+dependencies: {  }
+id: contributeur
+label: Contributeur
+weight: 3
+is_admin: null
+permissions: {  }
