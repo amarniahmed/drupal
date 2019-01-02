@@ -1,7 +1,0 @@
-purge_days_number: '30'
-_core:
-  default_config_hash: 2qn1OM12mINaV4rIjhb-VEfj4umqUpIk2EXAxy7v7p4
-user_statistics_role:
-  contributeur: contributeur
-  authenticated: 0
-  administrator: 0
