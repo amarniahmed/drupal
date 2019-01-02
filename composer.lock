@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "87299ffbf1eb63291a3490a5d2708f87",
+    "content-hash": "76f0c4311f8b6f5ebdbdcc1c4dae49f2",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -5838,6 +5838,48 @@
             ],
             "description": "Composer plugin to merge multiple composer.json files",
             "time": "2017-04-25T02:31:25+00:00"
+        },
+        {
+            "name": "zaporylie/composer-drupal-optimizations",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zaporylie/composer-drupal-optimizations.git",
+                "reference": "369c7f43c40f42089b00a239743e82b33f9f0f55"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zaporylie/composer-drupal-optimizations/zipball/369c7f43c40f42089b00a239743e82b33f9f0f55",
+                "reference": "369c7f43c40f42089b00a239743e82b33f9f0f55",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.1",
+                "drupal/core": "^8.5",
+                "symfony/console": "^3.4",
+                "symfony/process": "^3.4"
+            },
+            "require-dev": {
+                "composer/composer": "^1.6"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "zaporylie\\ComposerDrupalOptimizations\\Plugin"
+            },
+            "autoload": {
+                "psr-4": {
+                    "zaporylie\\ComposerDrupalOptimizations\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Jakub Piasecki",
+                    "email": "jakub@piaseccy.pl"
+                }
+            ],
+            "description": "Composer plugin to improve composer performance for Drupal projects",
+            "time": "2018-07-15T11:22:50+00:00"
         },
         {
             "name": "zendframework/zend-diactoros",
