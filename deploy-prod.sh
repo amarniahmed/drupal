@@ -1,3 +1,4 @@
+wi
 #!/usr/bin/env bash
 
 drush sset system.maintennance_mode 1
@@ -21,6 +22,9 @@ drush csex prod -y
 drush cim -y
 
 drush cr
+
+git add config/prod
+git commit -m 'Ajout de config'
 
 drush sset system.maintennance_mode 0
 
