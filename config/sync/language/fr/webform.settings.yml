@@ -16,10 +16,7 @@ settings:
   dialog_options:
     narrow:
       title: Étroit
-    normal:
-      title: Normal
     wide:
       title: Large
 element:
   default_more_title: Plus
-  default_section_title_tag: h2
