@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "6d5acef9de83708442888a9e517dbd4f",
+    "content-hash": "7d68015fc53aa126724aec1aee1e83f9",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1502,7 +1502,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/admin_toolbar",
-                "reference": "15f34d80cb3afd53d965c4473979085bcc6600c1"
+                "reference": "997942035b10884367a338c40c494a6f78d72b6b"
             },
             "require": {
                 "drupal/core": "*"
@@ -1570,7 +1570,7 @@
                 "source": "http://cgit.drupalcode.org/admin_toolbar",
                 "issues": "https://www.drupal.org/project/issues/admin_toolbar"
             },
-            "time": "2018-11-22 18:49:45"
+            "time": "2019-01-07 15:22:31"
         },
         {
             "name": "drupal/config_filter",
