@@ -6,8 +6,8 @@ drush config-set readonlymode.settings enabled 1 -y
 echo Maintenance mode enabled.
 drush cr
 
-# Mise à jour code.
-git pull origin master
+# Mise à jour config
+git pull origin2   master
 composer install --no-dev
 drush cr
 
@@ -25,7 +25,7 @@ drush cr
 #Ajout des config de prod au master
 git add config/prod
 git commit -m 'Ajout des configs de prod.'
-git push origin master
+git push origin2 master
 
 # Sortie du mode de Maintenance.
 #drush sset system.maintenance_mode 0
