@@ -1,0 +1,43 @@
+<?php
+
+use Drupal\Core\Database\Database;
+
+function annonce_schema(){
+
+
+$schema['annonce_history'] = [
+    'description' => 'store hitory of visiting page annonce.',
+    'fields' => [
+      'id' => [
+        'description' => 'Primary Key: Unique history ID.',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
+      'time' => [
+        'description' => 'Timestamp of user action.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
+
+        'uid'=> ['description'=> 'uid.',
+            'type'=> 'int',
+            'length'=> 10,
+            'not null'=> TRUE,
+            'unsigned' => TRUE,
+        ],
+        'aid'=>['description'=> 'annonce id.',
+                'type'=> 'int',
+                'length'=> 10,
+                'not null'=> TRUE,
+                'unsigned' => TRUE,
+       ],
+       ],
+    'primary key' => ['id'],
+
+  ];
+  return $schema;
+}
+
+

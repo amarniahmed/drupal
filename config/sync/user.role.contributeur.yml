@@ -6,4 +6,9 @@ id: contributeur
 label: Contributeur
 weight: 3
 is_admin: null
-permissions: {  }
+permissions:
+  - 'access toolbar'
+  - 'add annonce entities'
+  - 'delete own annonce entities'
+  - 'edit own annonce entities'
+  - 'view published annonce entities'
