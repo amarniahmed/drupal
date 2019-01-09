@@ -59,7 +59,7 @@ function hello_user_login(UserInterface $account)
     if (count($commun) > 0) {
 
         $database->insert('hello_user_statistics')->fields(['uid' => $iduser,
-            'time' => $time_deconnexion,
+            'time' => $time_connexion,
             'action' => 0,
         ])->execute();
     }

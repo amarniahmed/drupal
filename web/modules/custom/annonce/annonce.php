@@ -49,6 +49,7 @@ function hello_update_8001(){
                 ];
     $schema->addField('hello_user_statistics','uid',$field_spec);
 
+
 }
 function hello_uninstalled(){
    \Drupal::state()->delete('instant_calculate');
