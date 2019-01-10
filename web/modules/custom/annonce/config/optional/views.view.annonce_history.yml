@@ -320,13 +320,13 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: admin/structure/annonce/settings
+      path: admin/structure/annonce/settings/list_annonces
       menu:
         type: tab
         title: 'historic annonces'
         description: ''
         expanded: false
-        parent: system.admin_structure
+        parent: annonce.admin.structure.settings
         weight: 0
         context: '0'
         menu_name: admin
