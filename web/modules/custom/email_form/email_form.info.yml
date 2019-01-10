@@ -1,0 +1,7 @@
+name: 'Emailform'
+type: module
+description: 'Adds an email form for the reusable forms plugin.'
+core: 8.x
+package: 'training'
+dependencies:
+  - reusable_forms
