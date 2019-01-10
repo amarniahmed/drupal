@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   module:
-    - null
     - annonce
     - user
 id: annonce_history
@@ -65,6 +64,43 @@ display:
             next: ››
       style:
         type: table
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+          override: true
+          sticky: false
+          caption: ''
+          summary: ''
+          description: ''
+          columns:
+            time: time
+            aid: aid
+            name: name
+          info:
+            time:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            aid:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            name:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+          default: '-1'
+          empty_table: false
       row:
         type: fields
       fields:
@@ -246,7 +282,7 @@ display:
           plugin_id: field
       filters: {  }
       sorts: {  }
-      title: 'annonce history'
+      title: 'annonces History'
       header: {  }
       footer: {  }
       empty: {  }
