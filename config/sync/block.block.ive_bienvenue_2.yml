@@ -6,6 +6,7 @@ dependencies:
     - 'block_content:basic:485220fb-79e7-427e-9188-841fe4f66aa6'
   module:
     - block_content
+    - block_date
   theme:
     - ive
 id: ive_bienvenue_2
@@ -22,4 +23,10 @@ settings:
   status: true
   info: ''
   view_mode: full
-visibility: {  }
+visibility:
+  date_condition:
+    id: date_condition
+    start_date: '2019-01-10'
+    end_date: '2019-01-12'
+    negate: false
+    context_mapping: {  }
